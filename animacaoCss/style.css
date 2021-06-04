@@ -1,0 +1,74 @@
+
+/* ANIMAÇÕES */
+
+/* Uma animação permite que um elemento mude gradualmente de um estilo para outro.
+Você pode alterar quantas propriedades CSS quiser, quantas vezes quiser.
+Para usar a animação CSS, você deve primeiro especificar alguns quadros-chave para a animação.
+Keyframes possuem quais estilos o elemento terá em certos momentos.
+ */
+body{
+    background: #f7f7f7;
+    margin: 20px;
+}
+#ativar{
+    display: block;
+    margin: 20px auto;
+}
+
+#modal h1{
+    font-family: sans-serif;
+    margin: 0px 0px 20px;
+}
+#modal label{
+    display: block;
+    font-family: sans-serif;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+#modal input{
+    width: 96%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: .5rem;
+    font-size: 1rem;
+    background:#f7f7f7 ;
+}
+#modal button{
+    margin-top: 20px;
+    display: block;
+    font-size: 1rem;
+    font-family: sans-serif;
+    border: none;
+    padding: .6rem 2rem;
+    background: rgb(255, 212, 155);
+    border-radius: 4px;
+    color: #402d00;
+}
+/* COMEÇANDO A ANIMAÇÃO 
+
+1 KEYFRAMES -> Para usar a animação CSS, você deve primeiro especificar alguns quadros-chave para a animação.
+Keyframes possuem quais estilos o elemento terá em certos momentos.
+
+Quando você especifica estilos CSS dentro da regra, a animação mudará gradualmente do estilo atual para o novo estilo em determinados momentos.@keyframes
+
+Para que uma animação funcione, você deve vincular a animação a um elemento.*/
+
+#modal{
+    padding: 30px;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 3px rgba(0,0,0,.1);
+    max-width: 400px;
+    margin: 20px auto;
+    opacity: 0;
+}
+#modal.animar{
+    /* background-color: seagreen; */
+    animation-name: anima;
+    animation-duration: .3s;
+    animation-fill-mode: forwards;
+}
+@keyframes anima{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
