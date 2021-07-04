@@ -54,7 +54,19 @@ hr{
 	width: 140px;
 	margin: 20px auto;
 }
-
+p{
+	line-height: 21.82px;
+	padding: 0 10px;
+}
+.section__titulo{
+	text-align: center;
+	font-size: 3rem;
+	margin-bottom: 10px;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
 /**********************************/
 /* 2. Menu
 /**********************************/
@@ -93,7 +105,23 @@ hr{
 /**********************************/
 /* 4. Quem somos
 /**********************************/
-
+.somos{
+	max-width: 960px;
+	margin: 0 auto;
+	justify-content: center;
+	
+}
+.somos-c{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.somos-c__texto{
+	flex: 6 1 160px;
+}
+.somos-c__imagem{
+	flex: 1 1 350px;
+}
 /**********************************/
 /* 5. Nossos cursos
 /**********************************/
