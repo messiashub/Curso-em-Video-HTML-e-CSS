@@ -144,15 +144,150 @@ img{
 	text-align: center;
 	font-size: 1.5rem;
 	margin: 10px 0 5px 0;
-
+}
+.curso__descricao{
+	text-align: justify;
 }
 /**********************************/
 /* 6. Planos
 /**********************************/
+.planos{
+	background-color: var(--clr-pink-light);
+}
+.planos-c{
+	max-width: 960px;
+	margin: 0 auto;  /* centraliza no meio da  tela */
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: flex-end; /* alinhando pela base */
+}
+.plano{
+	width: 290px;
+	margin: 10px;
+	border: 2px solid var(--clr-green-light);
+}
+.plano__titulo{
+	font-size: 3rem;   /* 1rem = 16px(padrão) 3 x rem = 48px */
+	font-weight: bold;
+	text-align: center;
+	margin: 10px auto;
+}
+.plano__preco{
+	font-size: 3rem;
+	display: block;
+	text-align: center;
+	font-weight: bold;
+}
+.plano__preco sup{
+	position: relative;
+	font-size: 1.5rem;
+	top: -20px;
+}
+.plano__divisor{
+	background-color: var(--clr-green-light);
+	width: 20px;
+	margin: 5px auto;
+}
+.plano-lista{
+	width: 195px;
+	margin: 0 auto;
+}
+.plano-lista__item{
+	margin: 10px 0;
+	font-style: italic;
+	display: flex;
+	align-items: center;
+}
+.plano-lista__item::before{ /* before = Antes do elemento */
+	content: "";
+	display: block;
+	width: 5px;
+	height: 5px;
+	background-color: var(--clr-green-light);
+	border-radius: 5px;
+	margin-right: 5px;
+}
+.plano__btn-comprar{
+	display: block;
+	max-width: 180px;
+	font-size: 2rem;
+	font-weight: bold;
+	margin: 15px auto;
+	padding: 10px 10px 10px 6px;
+	text-align: center;
+	text-transform: uppercase;
+	border: 2px solid var(--clr-green-light);
 
+}
+.plano:last-child{  /* last-child = Ultimo filho de: */
+	background-color: var(--clr-green-light);
+}
+.plano:last-child .plano__btn-comprar{
+	border: 2px solid var(--clr-pink-dark);
+}
+.plano:last-child .plano-lista__item::before{
+	background: var(--clr-pink-dark);
+}
+/* Alterar as ordens de posição dos filhos do elemento plano-c */
+@media(max-width: 800px){
+	.plano:nth-child(3){
+		order: -2;
+	}
+	.plano:nth-child(2){
+		order: -1;
+	}
+}
 /**********************************/
 /* 7. Vantagens
 /**********************************/
+.vantagens{
+	max-width: 960px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.vantagem{
+	max-width: 240px;
+	margin: 10px;
+}
+.vantagem__titulo{
+	font-size: 1.7rem;
+	margin-bottom: 5px;
+	margin-left: 10px;
+}
+.vantagem__titulo::before{
+	content: "";
+	display: inline-block;
+	width: 10px;
+	height: 25px;
+	margin-right: 5px;
+}
+.vantagem:nth-of-type(3n+1) .vantagem__titulo::before{ /* n=0 , 3 x n = 0 + 1 = 1   pega o primeiro elemento*/
+	background: var(--clr-green-light);               /*  n=1, 3 x n = 3 + 1 = 4 pega o quarto elemento */
+}
+
+.vantagem:nth-of-type(3n+2) .vantagem__titulo::before{ /* n=0, 3 x n = 0 + 2 = 2  pega o segundo elemento */
+	background: var(--clr-pink-dark);                  /* n=1, 3 x n = 3 + 2 = 5  pega o quinto elemento */
+}
+.vantagem:nth-of-type(3n+3) .vantagem__titulo::before{ /* n=0, 3 x n = 0 + 3 = 3  pega o terceiro elemento */
+	background: var(--clr-green-dark);                  /* n=1, 3 x n = 3 + 3 = 6  pega o sexto elemento */
+}
+@media(max-width:480px) { /* Enquanto for menor que 480px */
+	.vantagens{
+		justify-content: center;
+	}
+	.vantagem{
+		max-width: 300px;	
+	}	
+}
+@media(min-width:481px) and (max-width:800px){ /* Enquanto estiver entre 481px e 800px */
+	.vantagem{
+		max-width: 220px;
+	}
+
+} 
 
 /**********************************/
 /* 8. Newsletter
