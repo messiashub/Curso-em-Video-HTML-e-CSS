@@ -286,12 +286,61 @@ img{
 	.vantagem{
 		max-width: 220px;
 	}
-
 } 
-
 /**********************************/
 /* 8. Newsletter
 /**********************************/
+.newsletter{
+	background-color: var(--clr-green-light);
+}
+.newsletter-c{
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 50px 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+.newsletter-info{
+	flex: 1 1 260px;
+	padding-left: 10px;
+}
+.newsletter-info__titulo{
+	font-size: 2.62rem;
+	font-weight: bold;
+}
+.newsletter-info__descricao{
+	font-style: italic;
+}
+.newsletter-form{
+	flex: 2 1 260px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.newsletter-form__input{
+	font-size: 1.25rem;
+	flex: 3 1 260px;
+	width: 325px;
+	color: black;
+	font-style: italic;
+	border: 10px solid var(--clr-pink-dark);
+	padding: 10px;
+	margin: 0px;
+	border-radius: 0px;
+}
+.newsletter-form__submit{
+	flex: 1 1 260px;
+	width: 192px;
+	font-family: var(--ff-fontPrimary);
+	font-size: 2.25rem;
+	font-weight: bold;
+	background-color: var(--clr-pink-dark);
+	color: black;
+	cursor: pointer;
+	border: none;
+	padding: 15px;
+
+
+}
 
 /**********************************/
 /* 9. Footer
